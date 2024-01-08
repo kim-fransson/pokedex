@@ -17,6 +17,13 @@ export default meta;
 
 type Story = StoryObj<typeof PokemonListItem>;
 
+export const Loading: Story = {
+  args: {
+    pokemon: undefined,
+    isLoading: true,
+  },
+};
+
 export const Grass: Story = {
   args: {
     pokemon: {

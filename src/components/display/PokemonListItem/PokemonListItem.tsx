@@ -1,8 +1,9 @@
 import { TypeBadge } from "@/components";
 import { formatId } from "@/utils";
 import { cva } from "class-variance-authority";
+import { useState } from "react";
 
-const card = cva(["p-6 rounded-2xl shadow-lg grid relative"], {
+const card = cva(["p-6 max-w-sm rounded-2xl shadow-lg grid relative"], {
   variants: {
     type: {
       fire: ["bg-[#EB6C6C]"],
@@ -28,32 +29,54 @@ const card = cva(["p-6 rounded-2xl shadow-lg grid relative"], {
 });
 
 export interface PokemonListItemProps {
-  pokemon: Pokemon;
+  pokemon?: Pokemon;
+  isLoading?: boolean;
 }
 
-export const PokemonListItem = (props: PokemonListItemProps) => {
-  const { name, types, id } = props.pokemon;
+export const PokemonListItem = ({
+  pokemon,
+  isLoading = false,
+}: PokemonListItemProps) => {
+  const [isLoadingImage, setIsLoadingImage] = useState(true);
+
+  if (!pokemon || isLoading) {
+    return <Skeleton />;
+  }
+
+  const { name, types, id } = pokemon;
+
   return (
-    <div className="max-w-xs grid">
-      <div className={card({ type: types[0] })}>
-        <img
-          src={`${
-            import.meta.env.VITE_POKEMON_OFFICIAL_ART_WORK_URL
-          }/${id}.png`}
-          alt={`${name}`}
-          width={180}
-          height={134}
-          className="absolute top-24 -translate-y-full left-1/2 -translate-x-1/2"
-        />
-        <h2 className="mt-28 capitalize text-3xl font-bold text-white">
-          {name}
-        </h2>
-        <h3 className="mt-2 text-lg font-bold text-white/80">{formatId(id)}</h3>
-        <div className="mt-5 flex gap-2 flex-wrap">
-          {types.map((type) => (
-            <TypeBadge key={type} type={type} />
-          ))}
-        </div>
+    <div className={card({ type: types[0] })}>
+      <img
+        className={`absolute top-24 -translate-y-full left-1/2 -translate-x-1/2 ${
+          isLoadingImage && "skeleton"
+        }`}
+        src={`${import.meta.env.VITE_POKEMON_OFFICIAL_ART_WORK_URL}/${id}.png`}
+        alt={`${name}`}
+        onLoad={() => setIsLoadingImage(false)}
+        width={180}
+        height={134}
+      />
+      <h2 className="mt-28 capitalize text-3xl font-bold text-white">{name}</h2>
+      <h3 className="mt-2 text-lg font-bold text-white/80">{formatId(id)}</h3>
+      <div className="mt-5 flex gap-2 flex-wrap">
+        {types.map((type) => (
+          <TypeBadge key={type} type={type} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Skeleton = () => {
+  return (
+    <div className={card()}>
+      <div className="shadow-lg h-[134px] w-[180px] skeleton absolute top-24 -translate-y-full left-1/2 -translate-x-1/2" />
+      <div className="mt-28 h-8 rounded-full w-32 skeleton" />
+      <div className="mt-2 rounded-full skeleton h-6 w-14" />
+      <div className="mt-5 flex gap-2 flex-wrap">
+        <div className="h-9 skeleton rounded-full w-16" />
+        <div className="h-9 skeleton rounded-full w-24" />
       </div>
     </div>
   );
