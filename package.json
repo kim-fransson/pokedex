@@ -10,7 +10,6 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "vercel": "vercel dev  --local-config vercel.local.json",
     "build-storybook": "storybook build",
     "prepare": "husky install",
     "commit": "cz"
@@ -22,11 +21,13 @@
     "**/*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@fontsource/roboto": "5.0.8",
     "@types/luxon": "3.3.8",
     "@uidotdev/usehooks": "2.4.1",
-    "@vercel/node": "3.0.14",
-    "axios": "1.6.3",
+    "class-variance-authority": "0.7.0",
     "framer-motion": "10.17.0",
+    "graphql": "16.8.1",
+    "graphql-request": "6.1.0",
     "luxon": "3.4.4",
     "react": "18.2.0",
     "react-aria": "3.31.0",

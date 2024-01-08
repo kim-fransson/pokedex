@@ -1,5 +1,5 @@
-import axios from "axios";
+import { request } from "graphql-request";
 
-export const fetcher = async (url: string) => {
-  return axios.get(url).then((res) => res.data);
+export const pokemonAPIFetcher = async (query: string) => {
+  return request(import.meta.env.VITE_POKEMON_BASE_URL, query);
 };

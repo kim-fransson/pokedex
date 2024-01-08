@@ -1,2 +1,2 @@
-export * from "./media";
 export * from "./fetcher";
+export * from "./pokemon";

@@ -7,7 +7,19 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        yellow: "#FFCE31",
+        "dark-gray": "#212121",
+        blue: "#C9D2EA",
+        "dark-blue": "#416EDF",
+      },
+      opacity: {
+        8: ".08",
+        12: ".12",
+        16: ".16",
+        24: ".24",
+        87: ".87",
+      },
     },
   },
   plugins: [
@@ -21,6 +33,6 @@ export default {
   ],
 
   daisyui: {
-    base: false, // applies background color and foreground color for root element by default
+    themes: ["nord"],
   },
 };
