@@ -7,11 +7,7 @@ const meta: Meta<typeof PokemonListScreen> = {
   component: PokemonListScreen,
   parameters: {
     layout: "fullscreen",
-    msw: {
-      handlers: [listPokemonHandler],
-    },
   },
-  decorators: [],
   args: {},
 };
 export default meta;
@@ -19,5 +15,11 @@ export default meta;
 type Story = StoryObj<typeof PokemonListScreen>;
 
 export const Playground: Story = {
-  args: {},
+  args: {
+    parameters: {
+      msw: {
+        handlers: [listPokemonHandler],
+      },
+    },
+  },
 };

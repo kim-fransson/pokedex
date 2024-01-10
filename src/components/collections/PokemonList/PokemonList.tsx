@@ -4,14 +4,9 @@ import { ListBox, ListBoxItem } from "react-aria-components";
 export interface PokemonListProps {
   pokemon: Pokemon[];
   isLoading?: boolean;
-  hasError?: boolean;
 }
 
-export const PokemonList = ({
-  pokemon,
-  isLoading,
-  hasError,
-}: PokemonListProps) => {
+export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
   const renderEmptyState = () => {
     if (isLoading) {
       return (
@@ -20,14 +15,6 @@ export const PokemonList = ({
             <PokemonListItem key={index} isLoading />
           ))}
         </>
-      );
-    }
-
-    if (hasError) {
-      return (
-        <span className="text-center text-lg font-bold col-span-4">
-          Looks that you couldn't catch them all
-        </span>
       );
     }
   };

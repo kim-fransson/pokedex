@@ -45,10 +45,3 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
-
-export const Error: Story = {
-  args: {
-    pokemon: [],
-    hasError: true,
-  },
-};

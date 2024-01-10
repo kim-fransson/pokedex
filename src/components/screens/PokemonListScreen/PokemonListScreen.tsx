@@ -39,11 +39,12 @@ export const PokemonListScreen = () => {
     },
   );
 
+  if (error) {
+    throw new Error(error);
+  }
+
   const responses = data as ListPokemonResponse[] | undefined;
   const memoizedPokemon = useMemo(() => {
-    console.log({
-      responses,
-    });
     if (!responses) {
       return [];
     }
@@ -67,11 +68,7 @@ export const PokemonListScreen = () => {
 
   return (
     <div className="relative">
-      <PokemonList
-        pokemon={memoizedPokemon}
-        isLoading={isLoading}
-        hasError={error}
-      />
+      <PokemonList pokemon={memoizedPokemon} isLoading={isLoading} />
       <div ref={ref} className="absolute top-[70%] invisible" />
       {isLoadingMore && (
         <div className="loading loading-spinner loading-lg scale-150 absolute -translate-x-1/2 left-1/2 bg-yellow bottom-2"></div>

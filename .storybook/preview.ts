@@ -1,6 +1,10 @@
 import type { Preview } from "@storybook/react";
 import { initialize, mswLoader } from "msw-storybook-addon";
 import "../src/index.css";
+import {
+  reactRouterParameters,
+  withRouter,
+} from "storybook-addon-react-router-v6";
 
 // Initialize MSW
 initialize({
@@ -8,7 +12,11 @@ initialize({
 });
 
 const preview: Preview = {
+  decorators: [withRouter],
   parameters: {
+    reactRouter: reactRouterParameters({
+      routing: { path: "/" },
+    }),
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {
