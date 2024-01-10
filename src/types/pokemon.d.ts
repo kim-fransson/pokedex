@@ -23,3 +23,15 @@ type Pokemon = {
   name: string;
   types: Type[];
 };
+
+type ListPokemonResponse = {
+  pokemon_v2_pokemon: Array<{
+    id: number;
+    name: string;
+    pokemon_v2_pokemontypes: Array<{
+      pokemon_v2_type: {
+        name: Type;
+      };
+    }>;
+  }>;
+};

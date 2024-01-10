@@ -1,0 +1,269 @@
+{
+  "pokemon_v2_pokemon": [
+    {
+      "id": 41,
+      "name": "zubat",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "golbat",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "oddish",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "gloom",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "vileplume",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "paras",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "parasect",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "venonat",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "venomoth",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "diglett",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "dugtrio",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "meowth",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "persian",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "psyduck",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "golduck",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "mankey",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fighting"
+          }
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "primeape",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fighting"
+          }
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "growlithe",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "arcanine",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "poliwag",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    }
+  ]
+}

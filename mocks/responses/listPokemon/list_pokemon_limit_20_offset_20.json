@@ -1,0 +1,254 @@
+{
+  "pokemon_v2_pokemon": [
+    {
+      "id": 21,
+      "name": "spearow",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "fearow",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "ekans",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "arbok",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "pikachu",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "electric"
+          }
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "raichu",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "electric"
+          }
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "sandshrew",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "sandslash",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "nidoran-f",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "nidorina",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "nidoqueen",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "nidoran-m",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "nidorino",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "nidoking",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "ground"
+          }
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "clefairy",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fairy"
+          }
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "clefable",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fairy"
+          }
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "vulpix",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "ninetales",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "jigglypuff",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "fairy"
+          }
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "wigglytuff",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "fairy"
+          }
+        }
+      ]
+    }
+  ]
+}

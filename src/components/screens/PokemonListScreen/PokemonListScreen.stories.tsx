@@ -1,9 +1,10 @@
-import { listPokemonHandler } from "@mocks/handlers";
-import App from "./App";
+import { PokemonListScreen } from "./PokemonListScreen";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof App> = {
-  component: App,
+import { listPokemonHandler } from "@mocks/handlers";
+
+const meta: Meta<typeof PokemonListScreen> = {
+  component: PokemonListScreen,
   parameters: {
     layout: "fullscreen",
     msw: {
@@ -15,7 +16,7 @@ const meta: Meta<typeof App> = {
 };
 export default meta;
 
-type Story = StoryObj<typeof App>;
+type Story = StoryObj<typeof PokemonListScreen>;
 
 export const Playground: Story = {
   args: {},

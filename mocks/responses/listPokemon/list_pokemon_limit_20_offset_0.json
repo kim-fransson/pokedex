@@ -1,0 +1,279 @@
+{
+  "pokemon_v2_pokemon": [
+    {
+      "id": 1,
+      "name": "bulbasaur",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ivysaur",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "venusaur",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "charmander",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "charmeleon",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "charizard",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "fire"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "squirtle",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "wartortle",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "blastoise",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "water"
+          }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "caterpie",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "metapod",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "butterfree",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "weedle",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "kakuna",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "beedrill",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "bug"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "pidgey",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "pidgeotto",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "pidgeot",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "flying"
+          }
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "rattata",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "raticate",
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "normal"
+          }
+        }
+      ]
+    }
+  ]
+}
