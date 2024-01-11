@@ -45,3 +45,9 @@ export const Loading: Story = {
     isLoading: true,
   },
 };
+
+export const Empty: Story = {
+  args: {
+    pokemon: [],
+  },
+};

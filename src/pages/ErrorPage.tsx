@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export const ErrorPage = () => {
   const navigate = useNavigate();
+
   return (
     <div className="grid justify-items-center absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
       <h2 className="text-2xl font-bold">Oh no...</h2>

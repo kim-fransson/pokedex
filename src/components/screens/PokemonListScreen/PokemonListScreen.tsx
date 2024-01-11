@@ -3,11 +3,16 @@ import { pokemonAPIFetcher } from "@/utils";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { gql } from "graphql-request";
 import { useEffect, useMemo, useState } from "react";
+import { json } from "react-router-dom";
 import useSWRInfinite from "swr/infinite";
 
 const listPokemonQuery = gql`
-  query listPokemon($limit: Int!, $offset: Int!) {
-    pokemon_v2_pokemon(limit: $limit, offset: $offset) {
+  query listPokemon($limit: Int!, $offset: Int!, $searchName: String = "") {
+    pokemon_v2_pokemon(
+      limit: $limit
+      offset: $offset
+      where: { name: { _iregex: $searchName } }
+    ) {
       id
       name
       pokemon_v2_pokemontypes {
@@ -19,7 +24,11 @@ const listPokemonQuery = gql`
   }
 `;
 
-export const PokemonListScreen = () => {
+export interface PokemonListProps {
+  searchName: string;
+}
+
+export const PokemonListScreen = ({ searchName }: PokemonListProps) => {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   const [ref, entry] = useIntersectionObserver<HTMLDivElement>({
@@ -29,7 +38,7 @@ export const PokemonListScreen = () => {
   });
 
   const { data, size, setSize, isLoading, error } = useSWRInfinite(
-    getKey,
+    (pageIndex) => getKey(pageIndex, searchName),
     pokemonAPIFetcher,
     {
       shouldRetryOnError: false,
@@ -40,7 +49,7 @@ export const PokemonListScreen = () => {
   );
 
   if (error) {
-    throw new Error(error);
+    throw json({ status: error?.status });
   }
 
   const responses = data as ListPokemonResponse[] | undefined;
@@ -77,6 +86,13 @@ export const PokemonListScreen = () => {
   );
 };
 
-const getKey = (pageIndex: number) => {
-  return [listPokemonQuery, { limit: 20, offset: pageIndex * 20 }];
+const getKey = (pageIndex: number, searchQuery: string) => {
+  return [
+    listPokemonQuery,
+    {
+      limit: 20,
+      offset: pageIndex * 20,
+      searchName: searchQuery,
+    },
+  ];
 };

@@ -1,4 +1,5 @@
 import { PokemonListItem } from "@/components";
+import { motion } from "framer-motion";
 import { ListBox, ListBoxItem } from "react-aria-components";
 
 export interface PokemonListProps {
@@ -17,6 +18,17 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
         </>
       );
     }
+
+    return (
+      <motion.span
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
+        className="col-span-full text-lg font-medium text-center"
+      >
+        No Pokémon detected - throw your Pokéball elsewhere and keep
+        adventuring!
+      </motion.span>
+    );
   };
 
   return (

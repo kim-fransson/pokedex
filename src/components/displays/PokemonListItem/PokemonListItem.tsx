@@ -70,7 +70,7 @@ export const PokemonListItem = ({
           src={`${
             import.meta.env.VITE_POKEMON_OFFICIAL_ART_WORK_URL
           }/${id}.png`}
-          alt={`${name}`}
+          alt={` `}
           width={180}
           height={134}
           loading="lazy"
