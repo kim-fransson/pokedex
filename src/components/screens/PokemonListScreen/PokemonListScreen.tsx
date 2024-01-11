@@ -7,11 +7,17 @@ import { json } from "react-router-dom";
 import useSWRInfinite from "swr/infinite";
 
 const listPokemonQuery = gql`
-  query listPokemon($limit: Int!, $offset: Int!, $searchName: String = "") {
+  query listPokemon(
+    $limit: Int!
+    $offset: Int!
+    $searchName: String = ""
+    $orderBy: [pokemon_v2_pokemon_order_by!]
+  ) {
     pokemon_v2_pokemon(
       limit: $limit
       offset: $offset
       where: { name: { _iregex: $searchName } }
+      order_by: $orderBy
     ) {
       id
       name
@@ -26,9 +32,13 @@ const listPokemonQuery = gql`
 
 export interface PokemonListProps {
   searchName: string;
+  orderBy: OrderBy;
 }
 
-export const PokemonListScreen = ({ searchName }: PokemonListProps) => {
+export const PokemonListScreen = ({
+  searchName,
+  orderBy,
+}: PokemonListProps) => {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
   const [ref, entry] = useIntersectionObserver<HTMLDivElement>({
@@ -38,7 +48,7 @@ export const PokemonListScreen = ({ searchName }: PokemonListProps) => {
   });
 
   const { data, size, setSize, isLoading, error } = useSWRInfinite(
-    (pageIndex) => getKey(pageIndex, searchName),
+    (pageIndex) => getKey(pageIndex, searchName, orderBy),
     pokemonAPIFetcher,
     {
       shouldRetryOnError: false,
@@ -86,13 +96,14 @@ export const PokemonListScreen = ({ searchName }: PokemonListProps) => {
   );
 };
 
-const getKey = (pageIndex: number, searchQuery: string) => {
+const getKey = (pageIndex: number, searchQuery: string, orderBy: OrderBy) => {
   return [
     listPokemonQuery,
     {
       limit: 20,
       offset: pageIndex * 20,
       searchName: searchQuery,
+      orderBy: [orderBy],
     },
   ];
 };

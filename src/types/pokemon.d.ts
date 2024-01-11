@@ -35,3 +35,13 @@ type ListPokemonResponse = {
     }>;
   }>;
 };
+
+type OrderBy =
+  | {
+      name: "asc" | "desc";
+    }
+  | {
+      id: "asc" | "desc";
+    };
+
+type OrderByKeys = "id_asc" | "id_desc" | "name_asc" | "name_desc";

@@ -41,7 +41,7 @@ export const Search = (props: SearchFieldProps) => {
           {...focusWithinProps}
           className="bg-transparent outline-none font-medium text flex-1 
         text-dark-blue placeholder:text-dark-blue focus:placeholder:text-dark-blue/60"
-          placeholder="Search for your favorite pokemon"
+          placeholder="Search for your favorite Pokémon"
         />
       </SearchField>
       <AnimatePresence>

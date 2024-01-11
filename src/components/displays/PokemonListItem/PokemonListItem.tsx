@@ -7,7 +7,7 @@ import Pokeball from "@icons/pokeball.svg?react";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 
 const card = cva(
-  ["p-6 outline-none max-w-sm rounded-2xl shadow-lg grid relative"],
+  ["p-6 outline-none max-w-sm rounded-2xl shadow-lg grid relative h-full"],
   {
     variants: {
       type: {
