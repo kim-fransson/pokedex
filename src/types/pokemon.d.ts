@@ -45,3 +45,5 @@ type OrderBy =
     };
 
 type OrderByKeys = "id_asc" | "id_desc" | "name_asc" | "name_desc";
+
+type HeightFilter = "small" | "medium" | "large";

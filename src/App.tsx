@@ -22,11 +22,11 @@ export default function App() {
           onSubmit={setSearchName}
         />
         <Select
+          aria-label="order by"
           selectedKey={getKey(orderBy)}
           onSelectionChange={(key) => {
             setOrderBy(getOrderBy(key as OrderByKeys));
           }}
-          aria-label="order by"
         >
           <Option id="id_asc">Lowest Number First</Option>
           <Option id="id_desc">Highest Number First</Option>
