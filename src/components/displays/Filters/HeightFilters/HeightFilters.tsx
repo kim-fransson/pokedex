@@ -37,7 +37,7 @@ const FilterCheckbox = ({ children, ...props }: FilterCheckboxProps) => {
     <Checkbox
       {...props}
       className="rounded-lg bg-dark-gray/16 w-12 h-12 flex items-center justify-center cursor-pointer
-      selected:bg-blue hover:scale-105 transition-all focus-visible:ring-2 ring-dark-blue"
+      selected:bg-blue hover:scale-105 transition-transform focus-visible:ring-2 ring-dark-blue"
     >
       {children}
     </Checkbox>
@@ -54,8 +54,18 @@ export const HeightFilters = ({
 }: HeightFiltersProps) => {
   return (
     <HeightFiltersCheckboxGroup
-      defaultValue={selectedFilters}
-      onChange={(values) => onChange(values as HeightFilter[])}
+      value={selectedFilters}
+      onChange={(values) => {
+        const heights = values as HeightFilter[];
+        if (
+          heights.includes("small") &&
+          heights.includes("large") &&
+          !heights.includes("medium")
+        ) {
+          heights.push("medium");
+        }
+        onChange(heights);
+      }}
     >
       <FilterCheckbox value="small">
         <img src={Small} />

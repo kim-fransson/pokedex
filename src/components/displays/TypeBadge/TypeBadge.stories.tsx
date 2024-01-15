@@ -20,6 +20,13 @@ export const Fire: Story = {
   },
 };
 
+export const FireInActive: Story = {
+  args: {
+    type: "fire",
+    active: false,
+  },
+};
+
 export const Bug: Story = {
   args: {
     type: "bug",

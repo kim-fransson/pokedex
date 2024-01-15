@@ -1,6 +1,6 @@
 import { cva } from "class-variance-authority";
 import type { VariantProps } from "class-variance-authority";
-import { useState } from "react";
+import { twMerge } from "tailwind-merge";
 
 const badge = cva(
   [
@@ -14,7 +14,7 @@ const badge = cva(
         water: ["bg-[#9FF3FF]"],
         flying: ["bg-gradient-to-b from-[#CBE9FF] to-[#2299EE]"],
         poison: ["bg-[#D89CFD]"],
-        normal: ["bg-[#CBCBCB]"],
+        normal: ["bg-[#C6C6A7]"],
         rock: ["bg-[#CFC06F]"],
         ground: ["bg-[#FFBF72]"],
         fighting: ["bg-[#FF699F]"],
@@ -32,21 +32,25 @@ const badge = cva(
   },
 );
 
-export type TypeBadgeProps = VariantProps<typeof badge>;
+export type TypeBadgeProps = VariantProps<typeof badge> & {
+  active?: boolean;
+};
 export const TypeBadge = (props: TypeBadgeProps) => {
-  const { type } = props;
-  const [isLoadingImage, setIsLoadingImage] = useState(true);
+  const { type, active = true } = props;
 
   if (!type) return null;
 
   return (
-    <span className={badge(props)}>
-      {isLoadingImage && <div className="h-4 w-4 rounded-full skeleton" />}
-      <img
-        onLoad={() => setIsLoadingImage(false)}
-        src={`/pokemon/type/${type}.svg`}
-        alt={`${type} type`}
-      />
+    <span
+      className={twMerge(
+        badge(props),
+        !active && "bg-dark-gray/16",
+        !active &&
+          type === "flying" &&
+          "bg-gradient from-dark-gray/16 to-dark-gray/16",
+      )}
+    >
+      <img src={`/pokemon/type/${type}.svg`} />
       {props.type}
     </span>
   );

@@ -3,3 +3,4 @@ export * from "./displays/TypeBadge/TypeBadge";
 export * from "./forms/Search/Search";
 export * from "./pickers/Select/Select";
 export * from "./screens/PokemonListScreen/PokemonListScreen";
+export * from "./overlays/FiltersTrigger/FiltersTrigger";

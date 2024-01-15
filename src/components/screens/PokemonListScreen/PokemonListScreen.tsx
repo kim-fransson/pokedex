@@ -1,5 +1,6 @@
 import { PokemonList } from "@/components/collections/PokemonList/PokemonList";
-import { pokemonAPIFetcher } from "@/utils";
+import { types } from "@/data/types";
+import { getHeightRange, getWeightRange, pokemonAPIFetcher } from "@/utils";
 import { useIntersectionObserver } from "@uidotdev/usehooks";
 import { gql } from "graphql-request";
 import { useEffect, useMemo, useState } from "react";
@@ -12,11 +13,22 @@ const listPokemonQuery = gql`
     $offset: Int!
     $searchName: String = ""
     $orderBy: [pokemon_v2_pokemon_order_by!]
+    $types: [String!] = []
+    $minHeight: Int
+    $maxHeight: Int
+    $minWeight: Int
+    $maxWeight: Int
   ) {
     pokemon_v2_pokemon(
       limit: $limit
       offset: $offset
-      where: { name: { _iregex: $searchName } }
+      where: {
+        name: { _iregex: $searchName }
+        pokemon_v2_pokemontypes: { pokemon_v2_type: { name: { _in: $types } } }
+        height: { _lte: $maxHeight, _gt: $minHeight }
+        weight: { _lte: $maxWeight, _gt: $minWeight }
+        is_default: { _eq: true }
+      }
       order_by: $orderBy
     ) {
       id
@@ -33,11 +45,13 @@ const listPokemonQuery = gql`
 export interface PokemonListProps {
   searchName: string;
   orderBy: OrderBy;
+  filters: Filters;
 }
 
 export const PokemonListScreen = ({
   searchName,
   orderBy,
+  filters,
 }: PokemonListProps) => {
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
@@ -48,7 +62,7 @@ export const PokemonListScreen = ({
   });
 
   const { data, size, setSize, isLoading, error } = useSWRInfinite(
-    (pageIndex) => getKey(pageIndex, searchName, orderBy),
+    (pageIndex) => getKey(pageIndex, searchName, orderBy, filters),
     pokemonAPIFetcher,
     {
       shouldRetryOnError: false,
@@ -87,16 +101,30 @@ export const PokemonListScreen = ({
 
   return (
     <div className="relative">
-      <PokemonList pokemon={memoizedPokemon} isLoading={isLoading} />
+      <PokemonList
+        pokemon={memoizedPokemon}
+        isLoading={isLoading || isLoadingMore}
+      />
       <div ref={ref} className="absolute top-[70%] invisible" />
-      {isLoadingMore && (
+      {/* {isLoadingMore && (
         <div className="loading loading-spinner loading-lg scale-150 absolute -translate-x-1/2 left-1/2 bg-yellow bottom-2"></div>
-      )}
+      )} */}
     </div>
   );
 };
 
-const getKey = (pageIndex: number, searchQuery: string, orderBy: OrderBy) => {
+const getKey = (
+  pageIndex: number,
+  searchQuery: string,
+  orderBy: OrderBy,
+  filters: Filters,
+) => {
+  const { min: minHeightInDecimeters, max: maxHeightInDecimeters } =
+    getHeightRange(filters[1]);
+
+  const { min: minWeightInHectograms, max: maxWeightInHectograms } =
+    getWeightRange(filters[2]);
+
   return [
     listPokemonQuery,
     {
@@ -104,6 +132,11 @@ const getKey = (pageIndex: number, searchQuery: string, orderBy: OrderBy) => {
       offset: pageIndex * 20,
       searchName: searchQuery,
       orderBy: [orderBy],
+      types: filters[0].length === 0 ? types : filters[0],
+      minHeight: minHeightInDecimeters,
+      maxHeight: maxHeightInDecimeters,
+      minWeight: minWeightInHectograms,
+      maxWeight: maxWeightInHectograms,
     },
   ];
 };

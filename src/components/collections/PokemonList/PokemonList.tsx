@@ -1,6 +1,7 @@
 import { PokemonListItem } from "@/components";
 import { motion } from "framer-motion";
 import { ListBox, ListBoxItem } from "react-aria-components";
+import Empty from "@icons/empty.svg?react";
 
 export interface PokemonListProps {
   pokemon: Pokemon[];
@@ -23,8 +24,9 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
       <motion.span
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.2 } }}
-        className="col-span-full text-lg font-medium text-center"
+        className="col-span-full text-lg font-medium text-center flex flex-col items-center justify-center gap-4"
       >
+        <Empty />
         No Pokémon detected - throw your Pokéball elsewhere and keep
         adventuring!
       </motion.span>
@@ -33,7 +35,7 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
 
   return (
     <ListBox
-      className="grid md:grid-cols-3 grid-cols-1 gap-x-8 gap-y-24 outline-none pt-24 pb-4 px-4"
+      className="grid md:grid-cols-3 grid-cols-1 lg:gap-x-8 gap-x-4 gap-y-24 outline-none pt-24 pb-4 px-4"
       aria-label="view more details about a pokemon"
       orientation="horizontal"
       items={pokemon}
