@@ -2,7 +2,7 @@ import { Evolutions } from "@/components";
 import { formatEvolutions, pokemonAPIFetcher } from "@/utils";
 import { gql } from "graphql-request";
 import { useMemo } from "react";
-import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 
 export interface EvolutionsScreenProps {
   pokemonId: number;
@@ -35,7 +35,7 @@ const evolutionsQuery = gql`
 `;
 
 export const EvolutionsScreen = ({ pokemonId }: EvolutionsScreenProps) => {
-  const { isLoading, data } = useSWR(
+  const { isLoading, data } = useSWRImmutable(
     [evolutionsQuery, { pokemonId }],
     pokemonAPIFetcher,
   );

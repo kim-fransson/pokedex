@@ -3,6 +3,7 @@ import { formatBaseStats, pokemonAPIFetcher } from "@/utils";
 import { gql } from "graphql-request";
 import { useMemo } from "react";
 import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 
 export interface BaseStatsScreenProps {
   pokemonId: number;
@@ -22,7 +23,7 @@ const baseStatsQuery = gql`
 `;
 
 export const BaseStatsScreen = ({ pokemonId }: BaseStatsScreenProps) => {
-  const { isLoading, data } = useSWR(
+  const { isLoading, data } = useSWRImmutable(
     [baseStatsQuery, { pokemonId }],
     pokemonAPIFetcher,
     {

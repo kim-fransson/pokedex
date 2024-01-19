@@ -67,6 +67,9 @@ export const PokemonListScreen = ({
     {
       shouldRetryOnError: false,
       parallel: true,
+      revalidateIfStale: false,
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
       onError: () => setIsLoadingMore(false),
       onSuccess: () => setIsLoadingMore(false),
     },
@@ -105,10 +108,12 @@ export const PokemonListScreen = ({
         pokemon={memoizedPokemon}
         isLoading={isLoading || isLoadingMore}
       />
-      <div ref={ref} className="absolute top-[70%] invisible" />
-      {/* {isLoadingMore && (
+      {memoizedPokemon.length > 0 && (
+        <div ref={ref} className="absolute top-[70%] invisible" />
+      )}
+      {isLoadingMore && (
         <div className="loading loading-spinner loading-lg scale-150 absolute -translate-x-1/2 left-1/2 bg-yellow bottom-2"></div>
-      )} */}
+      )}
     </div>
   );
 };

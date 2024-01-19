@@ -12,7 +12,6 @@ export interface PokemonListProps {
 export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedPokemonId, setSelectedPokemonId] = useState<number[]>([]);
-  // const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>();
 
   const renderEmptyState = () => {
     if (isLoading) {
@@ -61,7 +60,7 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
         {(item) => (
           <ListBoxItem
             textValue={item.name}
-            className="rounded-2xl cursor-pointer outline-none focus-visible:ring-4 ring-offset-2 ring-dark-blue selected:ring-4 selected:ring-yellow"
+            className="rounded-2xl cursor-pointer outline-none focus-visible:ring-4 ring-offset-2 ring-dark-blue"
             id={item.id}
           >
             <PokemonListItem pokemon={item} />

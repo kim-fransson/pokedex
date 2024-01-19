@@ -38,7 +38,7 @@ export const Evolutions = ({
     );
   }
   return (
-    <div className="grid gap-10">
+    <div className="grid gap-10 items-center h-full">
       {evolutions.map((evolution) => (
         <Evolution
           key={`${evolution.fromId}-${evolution.toId}`}
