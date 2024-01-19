@@ -9,6 +9,8 @@ import {
 import { useEffect, useState } from "react";
 import { getKey, getOrderBy } from "./utils";
 
+// todo: improve keyboard nav "details"
+// todo: center evolutions (looks better)
 export default function App() {
   const [inputValue, setInputValue] = useState("");
   const [searchName, setSearchName] = useState("");

@@ -29,7 +29,7 @@ const DetailTab = ({ children, id }: PropsWithChildren & { id: string }) => {
 
 const DetailPanel = ({ children, id }: PropsWithChildren & { id: string }) => {
   return (
-    <TabPanel className="px-6 py-8 flex-1 relative" id={id}>
+    <TabPanel className="px-6 py-8 flex-1 relative outline-none" id={id}>
       {children}
     </TabPanel>
   );

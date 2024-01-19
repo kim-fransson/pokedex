@@ -45,7 +45,7 @@ export const DetailsModal = ({
                 <>
                   <PokemonDetails pokemon={pokemon} />
                   <Button
-                    className="absolute top-8 z-20 left-10 text-white outline-none"
+                    className="absolute top-8 z-20 left-10 text-white outline-none focus-visible:ring-2 rounded-full ring-dark-blue"
                     onPress={close}
                   >
                     <ArrowBack className="h-5 w-5" />
