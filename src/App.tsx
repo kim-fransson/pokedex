@@ -26,7 +26,7 @@ export default function App() {
       <div className="max-w-7xl mx-auto grid gap-10">
         <div className="flex lg:flex-row flex-col lg:items-center items-start gap-4">
           <PokedexLogo />
-          <div className="lg:ml-auto md:flex-row flex-col md:items-center gap-y-2 gap-x-4 hidden">
+          <div className="lg:ml-auto md:flex-row flex-col md:items-center gap-y-2 gap-x-4 flex">
             <BigDevSoonPill />
             <PokemonAPIPill />
           </div>

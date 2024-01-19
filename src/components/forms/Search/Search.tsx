@@ -58,7 +58,7 @@ export const Search = (props: SearchFieldProps) => {
             <Button
               onPress={handleSubmit}
               className="min-w-36 max-h-10 ml-auto py-2 -my-2 text-center rounded-lg bg-yellow shadow-lg font-bold text-dark-blue
-            focus-visible:ring-2 ring-dark-blue outline-none"
+            focus-visible:ring-2 ring-dark-blue outline-none md:block hidden"
             >
               Search
             </Button>

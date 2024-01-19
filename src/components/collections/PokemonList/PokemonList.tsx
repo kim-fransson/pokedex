@@ -46,7 +46,7 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
   return (
     <>
       <ListBox
-        className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-8 gap-x-4 gap-y-24 outline-none pt-24 pb-4 px-4"
+        className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-8 gap-x-4 gap-y-24 outline-none pt-24 pb-4 md:px-4"
         aria-label="view more details about a pokemon"
         orientation="horizontal"
         items={pokemon}

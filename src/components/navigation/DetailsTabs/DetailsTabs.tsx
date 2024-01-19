@@ -8,7 +8,7 @@ const DetailTab = ({ children, id }: PropsWithChildren & { id: string }) => {
   return (
     <Tab
       className="cursor-pointer px-6 relative mb-1 group outline-none 
-      focus-visible:ring-2 ring-dark-blue text-xl text-dark-gray/60 selected:text-dark-gray font-bold
+      focus-visible:ring-2 ring-dark-blue md:text-xl text-lg text-dark-gray/60 selected:text-dark-gray font-bold
       transition-colors"
       id={id}
     >
