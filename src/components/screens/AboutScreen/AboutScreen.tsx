@@ -2,7 +2,6 @@ import { About } from "@/components";
 import { formatAbout, pokemonAPIFetcher } from "@/utils";
 import { gql } from "graphql-request";
 import { useMemo } from "react";
-import useSWR from "swr";
 import useSWRImmutable from "swr/immutable";
 
 export interface AboutScreenProps {
