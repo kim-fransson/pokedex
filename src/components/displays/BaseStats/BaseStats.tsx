@@ -29,7 +29,7 @@ export const BaseStats = ({ data, isLoading }: BaseStatsProps) => {
   const getProgressColor = (value: number) => {
     if (value < 50) {
       return "base-stats-low";
-    } else if (value < 80) {
+    } else if (value < 85) {
       return "base-stats-medium";
     } else {
       return "base-stats-high";
@@ -45,7 +45,7 @@ export const BaseStats = ({ data, isLoading }: BaseStatsProps) => {
           <progress
             className={`base-stats ${getProgressColor(value)}`}
             value={value}
-            max="100"
+            max="120"
           />
         </Fragment>
       ))}
@@ -56,7 +56,7 @@ export const BaseStats = ({ data, isLoading }: BaseStatsProps) => {
           <progress
             className={`base-stats ${getProgressColor(avg)}`}
             value={avg}
-            max="100"
+            max="120"
           />
         </Fragment>
       )}
