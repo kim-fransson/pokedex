@@ -1,4 +1,3 @@
-import { listPokemonHandler } from "@mocks/handlers";
 import App from "./App";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -6,9 +5,6 @@ const meta: Meta<typeof App> = {
   component: App,
   parameters: {
     layout: "fullscreen",
-    msw: {
-      handlers: [listPokemonHandler],
-    },
   },
   decorators: [],
   args: {},

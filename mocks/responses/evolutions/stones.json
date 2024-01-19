@@ -1,0 +1,220 @@
+{
+  "pokemon_v2_evolutionchain": [
+    {
+      "pokemon_v2_pokemonspecies": [
+        {
+          "name": "eevee",
+          "id": 133,
+          "evolves_from_species_id": null,
+          "pokemon_v2_pokemonevolutions": []
+        },
+        {
+          "name": "vaporeon",
+          "id": 134,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "water-stone",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png"
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "jolteon",
+          "id": 135,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "thunder-stone",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "flareon",
+          "id": 136,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "fire-stone",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png"
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "espeon",
+          "id": 196,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        },
+        {
+          "name": "umbreon",
+          "id": 197,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        },
+        {
+          "name": "leafeon",
+          "id": 470,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "leaf-stone",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png"
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "glaceon",
+          "id": 471,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "ice-stone",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png"
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "sylveon",
+          "id": 700,
+          "evolves_from_species_id": 133,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            },
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

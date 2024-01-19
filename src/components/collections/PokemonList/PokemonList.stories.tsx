@@ -6,7 +6,6 @@ const meta: Meta<typeof PokemonList> = {
   component: PokemonList,
   parameters: {
     layout: "fullscreen",
-    msw: {},
   },
   args: {},
 };

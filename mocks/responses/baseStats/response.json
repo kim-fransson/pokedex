@@ -1,0 +1,44 @@
+{
+  "pokemon_v2_pokemon": [
+    {
+      "pokemon_v2_pokemonstats": [
+        {
+          "pokemon_v2_stat": {
+            "name": "hp"
+          },
+          "base_stat": 45
+        },
+        {
+          "pokemon_v2_stat": {
+            "name": "attack"
+          },
+          "base_stat": 49
+        },
+        {
+          "pokemon_v2_stat": {
+            "name": "defense"
+          },
+          "base_stat": 49
+        },
+        {
+          "pokemon_v2_stat": {
+            "name": "special-attack"
+          },
+          "base_stat": 65
+        },
+        {
+          "pokemon_v2_stat": {
+            "name": "special-defense"
+          },
+          "base_stat": 65
+        },
+        {
+          "pokemon_v2_stat": {
+            "name": "speed"
+          },
+          "base_stat": 45
+        }
+      ]
+    }
+  ]
+}

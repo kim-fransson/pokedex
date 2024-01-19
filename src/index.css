@@ -6,7 +6,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   font-family: "Roboto", sans-serif;
 }
+
+@layer components {
+  .base-stats {
+    @apply 
+    rounded-lg h-2 [&::-webkit-progress-bar]:rounded-lg [&::-moz-progress-bar]:rounded-lg
+    [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-dark-gray/24 [&::-webkit-progress-value]:bg-[#FF6464] [&::-moz-progress-bar]:bg-[#FF6464];
+  }
+}
+
+
+
+

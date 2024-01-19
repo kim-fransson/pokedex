@@ -60,14 +60,14 @@ export const FiltersTrigger = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 backdrop-blur-sm z-40"
+            className="fixed inset-0 backdrop-blur-sm z-40"
           >
             <MotionModal
               initial={{ x: "100%" }}
               animate={{ x: "0%" }}
               transition={{ duration: 0.4, ease: "anticipate" }}
               exit={{ x: "100%", transition: { duration: 0.2 } }}
-              className="max-w-md outline-none z-50 absolute top-0 bottom-0 right-0 bg-light-gray shadow-lg rounded-tl-3xl rounded-bl-3xl"
+              className="max-w-md outline-none z-50 fixed top-0 bottom-0 right-0 bg-light-gray shadow-lg rounded-tl-3xl rounded-bl-3xl"
             >
               <Dialog aria-label="filters" className="outline-none h-full">
                 {({ close }) => (

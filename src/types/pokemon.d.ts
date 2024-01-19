@@ -36,6 +36,73 @@ type ListPokemonResponse = {
   }>;
 };
 
+type AboutPokemonResponse = {
+  pokemon_v2_pokemon: Array<{
+    pokemon_v2_pokemontypes: Array<{
+      pokemon_v2_type: {
+        name: string;
+      };
+    }>;
+    height: number;
+    weight: number;
+    pokemon_v2_pokemonabilities: Array<{
+      pokemon_v2_ability: {
+        name: string;
+      };
+    }>;
+  }>;
+};
+
+type PokemonStat = {
+  pokemon_v2_stat: {
+    name: string;
+  };
+  base_stat: number;
+};
+
+interface PokemonWithBaseStat {
+  pokemon_v2_pokemonstats: PokemonStat[];
+}
+
+type BaseStatsResponse = {
+  pokemon_v2_pokemon: PokemonWithBaseStat[];
+};
+
+type EvolutionsResponse = {
+  pokemon_v2_evolutionchain: EvolutionChain[];
+};
+
+type EvolutionChain = {
+  pokemon_v2_pokemonspecies: PokemonEvolution[];
+};
+
+type PokemonEvolution = {
+  id: number;
+  evolves_from_species_id: number;
+  pokemon_v2_pokemonevolutions: FromEvolutions[];
+};
+
+type FromEvolutions = {
+  min_level?: number;
+  pokemon_v2_item?: EvolutionItem;
+  pokemon_v2_evolutiontrigger: Trigger;
+};
+
+type EvolutionItem = {
+  name: string;
+  pokemon_v2_itemsprites?: EvolutionItemSprite[];
+};
+
+type EvolutionItemSprite = {
+  sprites?: {
+    default: string;
+  };
+};
+
+type Trigger = {
+  name: "level-up" | "use-item" | "trade" | "other";
+};
+
 type OrderBy =
   | {
       name: "asc" | "desc";
@@ -50,3 +117,30 @@ type HeightFilter = "small" | "medium" | "large";
 type WeightFilter = "small" | "medium" | "large";
 
 type Filters = [Type[], HeightFilter[], WeightFilter[]];
+
+type LevelUp = {
+  type: "level-up";
+  minLevel: number;
+};
+
+type UseItem = {
+  type: "use-item";
+  itemName: string;
+  image?: string;
+};
+
+type Trade = {
+  type: "trade";
+};
+
+type Other = {
+  type: "other";
+};
+
+type EvolutionTrigger = LevelUp | UseItem | Trade | Other;
+
+type Evolution = {
+  fromId: number;
+  toId: number;
+  trigger: EvolutionTrigger;
+};

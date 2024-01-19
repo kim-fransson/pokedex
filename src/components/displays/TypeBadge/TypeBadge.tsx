@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 const badge = cva(
   [
-    "inline-flex py-2 px-3 justify-center items-center rounded-full gap-1 text-dark-gray capitalize",
+    "inline-flex py-1.5 px-2.5 justify-center items-center rounded-full gap-1 text-dark-gray capitalize",
   ],
   {
     variants: {

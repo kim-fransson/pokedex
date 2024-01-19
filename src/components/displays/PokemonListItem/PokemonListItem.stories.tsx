@@ -3,14 +3,9 @@ import { PokemonListItem } from "./PokemonListItem";
 
 const meta: Meta<typeof PokemonListItem> = {
   component: PokemonListItem,
-  parameters: {},
-  decorators: [
-    (Story) => (
-      <div className="mt-32">
-        <Story />
-      </div>
-    ),
-  ],
+  parameters: {
+    layout: "centered",
+  },
   args: {},
 };
 export default meta;

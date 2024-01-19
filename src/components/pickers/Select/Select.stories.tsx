@@ -3,9 +3,6 @@ import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Select> = {
   component: Select,
-  parameters: {
-    msw: {},
-  },
   decorators: [],
   args: {},
 };

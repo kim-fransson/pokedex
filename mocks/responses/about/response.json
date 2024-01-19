@@ -1,0 +1,32 @@
+{
+  "pokemon_v2_pokemon": [
+    {
+      "pokemon_v2_pokemontypes": [
+        {
+          "pokemon_v2_type": {
+            "name": "grass"
+          }
+        },
+        {
+          "pokemon_v2_type": {
+            "name": "poison"
+          }
+        }
+      ],
+      "height": 7,
+      "weight": 69,
+      "pokemon_v2_pokemonabilities": [
+        {
+          "pokemon_v2_ability": {
+            "name": "overgrow"
+          }
+        },
+        {
+          "pokemon_v2_ability": {
+            "name": "chlorophyll"
+          }
+        }
+      ]
+    }
+  ]
+}

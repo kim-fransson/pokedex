@@ -5,7 +5,6 @@ const meta: Meta<typeof ErrorPage> = {
   component: ErrorPage,
   parameters: {
     layout: "fullscreen",
-    msw: {},
   },
   decorators: [],
   args: {},

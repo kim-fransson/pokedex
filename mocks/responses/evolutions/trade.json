@@ -1,0 +1,42 @@
+{
+  "pokemon_v2_evolutionchain": [
+    {
+      "pokemon_v2_pokemonspecies": [
+        {
+          "name": "gastly",
+          "id": 92,
+          "evolves_from_species_id": null,
+          "pokemon_v2_pokemonevolutions": []
+        },
+        {
+          "name": "haunter",
+          "id": 93,
+          "evolves_from_species_id": 92,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": 25,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        },
+        {
+          "name": "gengar",
+          "id": 94,
+          "evolves_from_species_id": 93,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "trade"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

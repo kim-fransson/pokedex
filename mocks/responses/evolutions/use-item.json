@@ -1,0 +1,60 @@
+{
+  "pokemon_v2_evolutionchain": [
+    {
+      "pokemon_v2_pokemonspecies": [
+        {
+          "name": "charcadet",
+          "id": 935,
+          "evolves_from_species_id": null,
+          "pokemon_v2_pokemonevolutions": []
+        },
+        {
+          "name": "armarouge",
+          "id": 936,
+          "evolves_from_species_id": 935,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "auspicious-armor",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": null
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ceruledge",
+          "id": 937,
+          "evolves_from_species_id": 935,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": {
+                "name": "malicious-armor",
+                "pokemon_v2_itemsprites": [
+                  {
+                    "sprites": {
+                      "default": null
+                    }
+                  }
+                ]
+              },
+              "pokemon_v2_evolutiontrigger": {
+                "name": "use-item"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

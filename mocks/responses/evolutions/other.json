@@ -1,0 +1,42 @@
+{
+  "pokemon_v2_evolutionchain": [
+    {
+      "pokemon_v2_pokemonspecies": [
+        {
+          "name": "pawmi",
+          "id": 921,
+          "evolves_from_species_id": null,
+          "pokemon_v2_pokemonevolutions": []
+        },
+        {
+          "name": "pawmot",
+          "id": 923,
+          "evolves_from_species_id": 922,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": null,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "other"
+              }
+            }
+          ]
+        },
+        {
+          "name": "pawmo",
+          "id": 922,
+          "evolves_from_species_id": 921,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": 18,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,7 +5,6 @@ const meta: Meta<typeof TypeBadge> = {
   component: TypeBadge,
   parameters: {
     layout: "centered",
-    msw: {},
   },
   decorators: [],
   args: {},

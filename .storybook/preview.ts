@@ -5,6 +5,12 @@ import {
   reactRouterParameters,
   withRouter,
 } from "storybook-addon-react-router-v6";
+import {
+  aboutHandler,
+  listPokemonHandler,
+  baseStatsHandler,
+  evolutionsHandler,
+} from "../mocks/handlers";
 
 // Initialize MSW
 initialize({
@@ -17,6 +23,14 @@ const preview: Preview = {
     reactRouter: reactRouterParameters({
       routing: { path: "/" },
     }),
+    msw: {
+      handlers: [
+        listPokemonHandler,
+        aboutHandler,
+        baseStatsHandler,
+        evolutionsHandler,
+      ],
+    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {

@@ -9,9 +9,6 @@ import {
 import { useEffect, useState } from "react";
 import { getKey, getOrderBy } from "./utils";
 
-// todo: handle 404 image
-// todo: Add error boundary (react-router)
-// todo: Handle different card heights? (long name)
 export default function App() {
   const [inputValue, setInputValue] = useState("");
   const [searchName, setSearchName] = useState("");

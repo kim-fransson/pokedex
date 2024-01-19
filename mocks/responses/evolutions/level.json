@@ -1,0 +1,42 @@
+{
+  "pokemon_v2_evolutionchain": [
+    {
+      "pokemon_v2_pokemonspecies": [
+        {
+          "name": "bulbasaur",
+          "id": 1,
+          "evolves_from_species_id": null,
+          "pokemon_v2_pokemonevolutions": []
+        },
+        {
+          "name": "venusaur",
+          "id": 3,
+          "evolves_from_species_id": 2,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": 32,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ivysaur",
+          "id": 2,
+          "evolves_from_species_id": 1,
+          "pokemon_v2_pokemonevolutions": [
+            {
+              "min_level": 16,
+              "pokemon_v2_item": null,
+              "pokemon_v2_evolutiontrigger": {
+                "name": "level-up"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
