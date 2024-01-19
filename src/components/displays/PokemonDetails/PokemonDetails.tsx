@@ -11,7 +11,7 @@ export interface PokemonDetailsProps {
 
 const card = cva(
   [
-    "outline-none md:w-auto md:min-w-[725px] w-dvw rounded-2xl shadow-lg grid relative overflow-x-clip",
+    "outline-none md:w-auto md:min-w-[725px] w-dvw rounded-2xl shadow-lg grid relative",
   ],
   {
     variants: {
@@ -43,7 +43,7 @@ export const PokemonDetails = (props: PokemonDetailsProps) => {
   const { id, name, types } = props.pokemon;
   return (
     <div className={card({ type: types[0] })}>
-      <div className="gap-5 pt-14 relative pb-12 flex items-center justify-center z-10">
+      <div className="gap-5 pt-14 relative pb-12 flex items-center justify-center z-10 overflow-clip">
         <img
           src={`${
             import.meta.env.VITE_POKEMON_OFFICIAL_ART_WORK_URL

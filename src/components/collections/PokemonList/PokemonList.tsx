@@ -2,7 +2,7 @@ import { DetailsModal, PokemonListItem } from "@/components";
 import { motion } from "framer-motion";
 import { ListBox, ListBoxItem } from "react-aria-components";
 import Empty from "@icons/empty.svg?react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export interface PokemonListProps {
   pokemon: Pokemon[];
@@ -11,7 +11,8 @@ export interface PokemonListProps {
 
 export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>();
+  const [selectedPokemonId, setSelectedPokemonId] = useState<number[]>([]);
+  // const [selectedPokemon, setSelectedPokemon] = useState<Pokemon>();
 
   const renderEmptyState = () => {
     if (isLoading) {
@@ -37,6 +38,12 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
     );
   };
 
+  useEffect(() => {
+    if (selectedPokemonId[0]) {
+      setIsOpen(true);
+    }
+  }, [selectedPokemonId]);
+
   return (
     <>
       <ListBox
@@ -44,19 +51,17 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
         aria-label="view more details about a pokemon"
         orientation="horizontal"
         items={pokemon}
+        selectedKeys={selectedPokemonId}
         selectionMode="single"
         renderEmptyState={renderEmptyState}
         onSelectionChange={(selection) => {
-          setSelectedPokemon(
-            pokemon.find((p) => p.id === Array.from(selection)[0]),
-          );
-          setIsOpen(true);
+          setSelectedPokemonId(Array.from(selection) as number[]);
         }}
       >
         {(item) => (
           <ListBoxItem
             textValue={item.name}
-            className="rounded-2xl cursor-pointer outline-none focus-visible:ring-4 ring-offset-2 ring-dark-blue"
+            className="rounded-2xl cursor-pointer outline-none focus-visible:ring-4 ring-offset-2 ring-dark-blue selected:ring-4 selected:ring-yellow"
             id={item.id}
           >
             <PokemonListItem pokemon={item} />
@@ -65,8 +70,13 @@ export const PokemonList = ({ pokemon, isLoading }: PokemonListProps) => {
       </ListBox>
       <DetailsModal
         isOpen={isOpen}
-        onOpenChange={setIsOpen}
-        pokemon={selectedPokemon as Pokemon}
+        onOpenChange={(open) => {
+          if (!open) {
+            setSelectedPokemonId([]);
+          }
+          setIsOpen(open);
+        }}
+        pokemon={pokemon.find((p) => p.id === selectedPokemonId[0]) as Pokemon}
       />
     </>
   );

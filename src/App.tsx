@@ -9,8 +9,6 @@ import {
 import { useEffect, useState } from "react";
 import { getKey, getOrderBy } from "./utils";
 
-// todo: improve keyboard nav "details"
-// todo: center evolutions (looks better)
 export default function App() {
   const [inputValue, setInputValue] = useState("");
   const [searchName, setSearchName] = useState("");
@@ -26,7 +24,13 @@ export default function App() {
   return (
     <div className="min-h-dvh lg:px-16 px-4 py-8">
       <div className="max-w-7xl mx-auto grid gap-10">
-        <PokedexLogo />
+        <div className="flex lg:flex-row flex-col lg:items-center items-start gap-4">
+          <PokedexLogo />
+          <div className="lg:ml-auto md:flex-row flex-col md:items-center gap-y-2 gap-x-4 hidden">
+            <BigDevSoonPill />
+            <PokemonAPIPill />
+          </div>
+        </div>
         <Search
           value={inputValue}
           onChange={setInputValue}
@@ -60,3 +64,39 @@ export default function App() {
     </div>
   );
 }
+
+const BigDevSoonPill = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="select-none rounded-lg bg-[#672871] px-2 py-1 text-gray-100 font-medium">
+        Designs from
+      </span>
+      <a
+        className="font-medium hover:text-[#672871]"
+        href="https://bigdevsoon.me/"
+        target="_blank"
+        title="BigDevSoon"
+      >
+        BigDevSoon.me
+      </a>
+    </div>
+  );
+};
+
+const PokemonAPIPill = () => {
+  return (
+    <div className="flex items-center gap-2">
+      <span className="select-none rounded-lg bg-[#ef5350] px-2 py-1 text-gray-100 font-medium">
+        Powered by
+      </span>
+      <a
+        className="font-medium hover:text-[#ef5350]"
+        href="https://pokeapi.co/docs/graphql#betastatus"
+        target="_blank"
+        title="PokéApi"
+      >
+        PokéAPI.com (graphql beta)
+      </a>
+    </div>
+  );
+};
