@@ -36,7 +36,7 @@ export default function App() {
           onChange={setInputValue}
           onSubmit={setSearchName}
         />
-        <div className="flex justify-between">
+        <div className="flex justify-between items-center">
           <Select
             aria-label="order by"
             selectedKey={getKey(orderBy)}
@@ -44,8 +44,8 @@ export default function App() {
               setOrderBy(getOrderBy(key as OrderByKeys));
             }}
           >
-            <Option id="id_asc">Lowest Number First</Option>
-            <Option id="id_desc">Highest Number First</Option>
+            <Option id="id_asc">Lowest Number</Option>
+            <Option id="id_desc">Highest Number</Option>
             <Option id="name_asc">Alphabetically (A-Z)</Option>
             <Option id="name_desc">Alphabetically (Z-A)</Option>
           </Select>
