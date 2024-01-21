@@ -2,7 +2,7 @@
 
 Project designed from [BigDevSoon.me](https://bigdevsoon.me/)
 
-Live demo: https://pokedex-mu-drab.vercel.app/
+Live demo: https://pokedex.made-by-kim.com/
 
 ## Preview
 
